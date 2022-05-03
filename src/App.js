@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Pokedex from './Pokedex';
 
 function App() {
+  let newPokemon = [
+    {id: 11, name: 'Metapod', type: 'bug', base_experience: 72},
+    {id: 12, name: 'Butterfree', type: 'flying', base_experience: 178}
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Pokedex</h1>
+      <Pokedex newPokemon={newPokemon}/>
     </div>
   );
 }
